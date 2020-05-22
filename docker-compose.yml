@@ -4,7 +4,8 @@ services:
 
 
     es01:
-        image: elasticsearch:7.7.0
+        build: elasticsearch
+        image: sockyjam/elasticsearch:v01
         container_name: sockyjam.es01
         environment:
             - node.name=es01
