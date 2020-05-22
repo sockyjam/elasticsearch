@@ -22,7 +22,14 @@ services:
         networks:
             - elastic
 
-
+    eshd:
+        image: containerize/elastichd
+        links:
+            - es01
+        ports:
+            - 9800:9800
+        networks:
+            - elastic
 
 
 networks:
